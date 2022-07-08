@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        blur: 'url(/src/assets/blur-bg.png)'
+        blur: 'url(/public/img/blur-bg.png)'
       },
       fontFamily: {
         sans: 'Roboto, sans-serif', // Indica pro tailwind que a fonte padrão deve ser a Roboto
