@@ -1,7 +1,7 @@
 // DefaultUi controles de vídeo padrão da lib
 import { DefaultUi, Player, Youtube } from "@vime/react";
 import { CaretRight, FileArrowDown } from "phosphor-react";
-import { Button } from "./Buton";
+import { Button } from "./Button";
 import { gql, useQuery } from "@apollo/client";
 
 // Tema para o vime e vídeo funcionar o layout corretamente
@@ -66,7 +66,7 @@ export function Video(props: VideoProps) {
     <section className="flex-1">
       <div className="bg-black flex justify-center">
         <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
-          <Player>
+          <Player isPiPActive>
             <Youtube videoId={data.lesson.videoId} />
             <DefaultUi />
           </Player>
