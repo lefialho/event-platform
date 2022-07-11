@@ -59,6 +59,7 @@ export function Subscribe() {
               type="text"
               placeholder="Seu nome completo"
               onChange={e => setName(e.target.value)}
+              required
             />
             <input
               className="bg-gray-900 border border-gray-500 rounded px-5 h-14"
@@ -71,7 +72,7 @@ export function Subscribe() {
             <button
               className="button mt-4 bg-green-500 hover:bg-green-700 hover:disabled:bg-green-500 disabled:opacity-60 disabled:cursor-not-allowed"
               type="submit"
-              disabled={name.length === 0 || email.length === 0 && loading /* loading não permite que o usuário clique várias vezes no botão e fazendo várias requisições */}
+              disabled={loading /* loading não permite que o usuário clique várias vezes no botão e fazendo várias requisições */}
             >
               Garantir minha vaga
             </button>
