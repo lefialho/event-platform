@@ -1,4 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
+import classNames from "classnames";
 import { useGetLessonsQuery } from "../graphql/generated";
 import { Lesson } from "./Lesson";
 
@@ -24,12 +25,20 @@ import { Lesson } from "./Lesson";
 //   }[]
 // }
 
-export function SideBar() {
+interface Menu {
+  menu: boolean,
+  closeMenu: () => void
+}
+
+export function SideBar(props: Menu) {
   // const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY);
   const { data } = useGetLessonsQuery()
-   
+
   return (
-    <aside className="w-[348px] bg-gray-700 p-6 border-l border-gray-600">
+    <aside className={classNames(`w-[348px] bg-gray-700 p-6 border-l border-gray-600 lg:block` , {
+      'block absolute w-screen h-full' : props.menu,
+      'hidden' : !props.menu,
+    })}>
       <h2 className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500">Cronograma das aulas</h2>
       
       <div className="flex flex-col gap-8">
@@ -41,6 +50,7 @@ export function SideBar() {
               slug={lesson.slug}
               availableAt={new Date(lesson.availableAt)}
               type={lesson.lessonType}
+              onClickLesson={props.closeMenu}
             />
           )
         })}

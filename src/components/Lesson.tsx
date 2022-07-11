@@ -3,12 +3,12 @@ import { isPast, format } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import { Link, useParams } from 'react-router-dom';
 import classNames from 'classnames';
-
 interface LessonProps {
   title: string;
   slug: string;
   availableAt: Date;
   type: 'live' | 'class'; // Live = aula ao vivo, class = aula prática
+  onClickLesson: () => void,
 }
 
 export function Lesson(props: LessonProps) {
@@ -22,7 +22,7 @@ export function Lesson(props: LessonProps) {
   const isActiveLesson = slug === props.slug; // Significa que essa aula está ativa
 
   return (
-    <Link to={`/event/lesson/${props.slug}`} className="group">
+    <Link to={`/event/lesson/${props.slug}`} className="group" onClick={props.onClickLesson}>
       <span className="text-gray-300 capitalize">
         {availableDateFormatted}
         {/* {props.availableAt.toString()} */}
