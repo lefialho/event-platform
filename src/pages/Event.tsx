@@ -50,7 +50,7 @@ export function Event(props: getSubscriber) {
         ) : (
           <div className="flex-1 p-6">
             <div className="border border-gray-500 p-4 rounded">
-              <h1 className="text-2xl font-bold">Bem vindo! {props.name}</h1>
+              <h1 className="text-2xl font-bold">Bem vindo - {props.name}</h1>
               <p className="mb-4"><b>Email:</b> {props.email}</p>
               <div className="flex gap-2 items-center">
                 <FileSearch size={24} />
