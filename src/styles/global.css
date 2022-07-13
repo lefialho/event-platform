@@ -16,9 +16,13 @@ body {
 }
 
 .lesson {
-  @apply rounded border border-gray-500 p-4 mt-2 
+  @apply rounded border border-gray-500 p-4 mt-2 relative 
 }
 
 .aula-aovivo-pratica {
   @apply uppercase text-xs rounded py-[0.125rem] px-2 border border-green-300 font-bold
+}
+
+.active-lesson {
+  @apply bg-green-500 before:absolute before:left-[-6px] before:top-1/2 before:translate-y-[-50%] before:rotate-45 before:w-3 before:h-3 before:bg-green-500
 }

@@ -33,7 +33,7 @@ export function Lesson(props: LessonProps) {
 
       <div className={isLessonAvaiable 
         ? classNames('lesson group-hover:border-green-500', {
-        'bg-green-500': isActiveLesson // fica com bg verde quando a aula está ativa
+        'active-lesson': isActiveLesson // fica com bg verde quando a aula está ativa
       }) 
         : 'lesson cursor-not-allowed group-hover:border-gray-500'}>
         <header className="flex items-center justify-between">
