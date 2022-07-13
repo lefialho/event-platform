@@ -1,9 +1,9 @@
 // DefaultUi controles de vídeo padrão da lib
 import { CaretRight, FileArrowDown } from "phosphor-react";
 import { Button } from "./Button";
-import ReactPlayer from 'react-player'
-import { DefaultUi, Player, Youtube } from "@vime/react";
-import { gql, useQuery } from "@apollo/client";
+import ReactPlayer from 'react-player/youtube'
+// import { DefaultUi, Player, Youtube } from "@vime/react";
+// import { gql, useQuery } from "@apollo/client";
 
 // Tema para o vime e o vídeo ativar o layout
 import '@vime/core/themes/default.css';
@@ -37,7 +37,6 @@ import { useGetLessonBySlugQuery } from "../graphql/generated";
 //   }
 // }
 
-
 interface VideoProps {
   lessonSlug: string;
 }
@@ -51,7 +50,7 @@ export function Video(props: VideoProps) {
 
   const { data } = useGetLessonBySlugQuery({
     variables: {
-      slug: props.lessonSlug,
+      slug: props.lessonSlug
     }
   })
 

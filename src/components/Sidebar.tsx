@@ -35,7 +35,7 @@ export function SideBar(props: Menu) {
   const { data } = useGetLessonsQuery()
 
   return (
-    <aside className={classNames(`w-[348px] bg-gray-700 p-6 border-l border-gray-600 lg:block` , {
+    <aside className={classNames(`w-[348px] bg-gray-700 p-6 border-l border-gray-600 xl:block` , {
       'block absolute w-screen h-full' : props.menu,
       'hidden' : !props.menu,
     })}>
