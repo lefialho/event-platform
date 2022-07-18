@@ -52,8 +52,8 @@ export function Event(props: getSubscriber) {
             <div className="border border-gray-500 p-4 rounded">
               <h1 className="text-2xl font-bold">Bem vindo - {props.name}</h1>
               <p className="mb-4"><b>Email:</b> {props.email}</p>
-              <div className="flex gap-2 items-center">
-                <FileSearch size={24} />
+              <div className="flex gap-2">
+                <FileSearch size={24} className="min-w-[24px]"/>
                 <p>Para encontrar os conteúdos, acesse o menu de <b>Aulas</b></p>
               </div>
             </div>
