@@ -28,5 +28,5 @@ body {
 }
 
 .deslogar {
-  @apply px-2 bg-blue-500 text-blue-900 rounded
+  @apply px-2 border border-orange-500 rounded text-orange-500 rounded
 }
