@@ -2,6 +2,7 @@ import { gql, useMutation } from "@apollo/client";
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
+import { SpinLoader } from "../components/SpinLoader";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 
 interface Subscribe {
@@ -49,7 +50,7 @@ export function Subscribe(props: Subscribe) {
               type="submit"
               disabled={props.loading /* loading não permite que o usuário clique várias vezes no botão e fazendo várias requisições */}
             >
-              Garantir minha vaga
+              {props.loading && <SpinLoader width={'w-4'}/>} Garantir minha vaga
             </button>
           </form>
         </div>

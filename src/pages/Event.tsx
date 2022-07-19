@@ -48,14 +48,16 @@ export function Event(props: getSubscriber) {
         {slug ? (
           <Video lessonSlug={slug} />
         ) : (
-          <div className="flex-1 p-6">
-            <div className="border border-gray-500 p-4 rounded">
-              <h1 className="text-2xl font-bold">Bem vindo - {props.name}</h1>
-              <p className="mb-4"><b>Email:</b> {props.email}</p>
-              <div className="flex gap-2">
-                <FileSearch size={24} className="min-w-[24px]"/>
-                <p>Para encontrar os conteúdos, acesse o menu de <b>Aulas</b></p>
-              </div>
+          <div className="flex-1 p-6 flex flex-col">
+            <div className="flex-1">
+             <div className="border border-gray-500 p-4 rounded">
+               <h1 className="text-2xl font-bold">Bem vindo - {props.name}</h1>
+               <p className="mb-4"><b>Email:</b> {props.email}</p>
+               <div className="flex gap-2">
+                 <FileSearch size={24} className="min-w-[24px]"/>
+                 <p>Para encontrar os conteúdos, acesse o menu de <b>Aulas</b></p>
+               </div>
+             </div>
             </div>
             <img src="./img/code-mock.png" className="mt-10" alt="laptop" />
           </div> /*slug = tem vídeo?*/

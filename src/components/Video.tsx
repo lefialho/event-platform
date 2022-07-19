@@ -1,5 +1,5 @@
 // DefaultUi controles de vídeo padrão da lib
-import { CaretRight, FileArrowDown } from "phosphor-react";
+import { CaretRight, CircleNotch, FileArrowDown } from "phosphor-react";
 import { Button } from "./Button";
 import ReactPlayer from 'react-player/youtube'
 // import { DefaultUi, Player, Youtube } from "@vime/react";
@@ -8,6 +8,7 @@ import ReactPlayer from 'react-player/youtube'
 // Tema para o vime e o vídeo ativar o layout
 import '@vime/core/themes/default.css';
 import { useGetLessonBySlugQuery } from "../graphql/generated";
+import { SpinLoader } from "./SpinLoader";
 
 // const GET_LESSON_BY_SLUG_QUERY = gql`
 //   query GetLessonBySlug ($slug: String) {
@@ -56,8 +57,9 @@ export function Video(props: VideoProps) {
 
   if (!data || !data.lesson) {
     return (
-      <div className="flex-1">
-        <p>Carregando...</p>
+      <div className="flex-1 grid place-content-center">
+        <SpinLoader width={'w-10'}/>
+        {/* <p>Carregando...</p> */}
       </div>
     )
   }

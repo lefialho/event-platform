@@ -5,6 +5,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        'spin-fast': 'spin-fast .5s ease-in-out infinite',
+      },
+      keyframes: {
+        'spin-fast': {
+         to: { transform: 'rotate(360deg)' },
+        }
+      },
       backgroundImage: {
         blur: 'url(/public/img/blur-bg.png)'
       },
