@@ -36,13 +36,18 @@ export function SideBar(props: Menu) {
   const { data } = useGetLessonsQuery();
   const navigate = useNavigate() // Redireciona o usuário para uma nova tela sem ter que clicar em um link # a
 
+  function handleNavigate() {
+    navigate('/')
+    window.location.reload();
+  }
+
   return (
     <aside className={classNames(`w-[348px] bg-gray-700 p-6 border-l border-gray-600 xl:block`, {
       'block absolute w-screen h-full': props.menu,
       'hidden': !props.menu,
     })}>
       <div className="flex justify-end">
-        <button className="xl:hidden mb-4 deslogar" onClick={() => navigate('/')}>Deslogar</button>
+        <button className="xl:hidden mb-4 deslogar" onClick={handleNavigate}>Deslogar</button>
       </div>
 
       <h2 className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500">Cronograma das aulas</h2>
