@@ -42,7 +42,7 @@ export function SideBar(props: Menu) {
       'hidden': !props.menu,
     })}>
       <div className="flex justify-end">
-        <button className="xl:hidden border px-2 mb-4 border-green-300 rounded" onClick={() => navigate('/')}>Deslogar</button>
+        <button className="xl:hidden mb-4 deslogar" onClick={() => navigate('/')}>Deslogar</button>
       </div>
 
       <h2 className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500">Cronograma das aulas</h2>

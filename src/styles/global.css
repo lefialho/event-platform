@@ -26,3 +26,7 @@ body {
 .active-lesson {
   @apply bg-green-500 before:absolute before:left-[-6px] before:top-1/2 before:translate-y-[-50%] before:rotate-45 before:w-3 before:h-3 before:bg-green-500
 }
+
+.deslogar {
+  @apply px-2 bg-green-300 text-green-100 rounded
+}
