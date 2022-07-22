@@ -18,7 +18,7 @@ export function Header(props: Menu) {
       <Logo />
       <button className="hidden xl:block deslogar" onClick={handleNavigate}>Deslogar</button>
       <button className="xl:hidden flex items-center gap-2 group" onClick={props.setOpenMenu}>
-        <span className="text-sm">Aulas</span> 
+        <span className="text-sm">Menu</span> 
         <List size={30} className="group-hover:text-blue-500"/> 
       </button>
     </header>
