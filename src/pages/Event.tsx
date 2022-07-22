@@ -55,7 +55,7 @@ export function Event(props: getSubscriber) {
                <p className="mb-4"><b>Email:</b> {props.email}</p>
                <div className="flex gap-2">
                  <FileSearch size={24} className="min-w-[24px]"/>
-                 <p>Para encontrar os conteúdos, acesse o menu de <b>Aulas</b></p>
+                 <p>Para encontrar os conteúdos, acesse o <b>menu</b></p>
                </div>
              </div>
             </div>

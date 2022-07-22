@@ -50,7 +50,7 @@ export function SideBar(props: Menu) {
         <button className="xl:hidden mb-4 deslogar" onClick={handleNavigate}>Deslogar</button>
       </div>
 
-      <h2 className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500">Cronograma das aulas</h2>
+      <h2 className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500">Conteúdos cadastrados</h2>
 
       <div className="flex flex-col gap-8">
         {data?.lessons.map(lesson => {
