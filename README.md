@@ -10,4 +10,4 @@ npm start
 (https://event-platform-three-puce.vercel.app/)
 
 **Obs:** Na hora de criar um usuário para acessar os conteúdos em alguns momentos, tem uma falha na api do graphcms e o request não funciona. 
-Geralmente o é resolvido esperando alguns instantes e tentando novamente em outra janela do navegador
+Geralmente é resolvido esperando alguns instantes e tentando novamente em outra janela do navegador
